@@ -7,20 +7,30 @@
   padding: 0;
 }
 
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f0f2f5;
   min-height: 100vh;
+  position: relative;
 }
 
 .fondo-estatico {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   background-image: url('fondo1.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /* =========================
@@ -30,6 +40,8 @@ body {
   max-width: 700px;
   margin: 0 auto;
   padding: 24px 16px 80px;
+  position: relative;
+  z-index: 1;
 }
 
 .panel {
@@ -476,6 +488,7 @@ body {
     font-size: 13px;
   }
 }
+
 /* =========================
    ADMIN: SECCIONES Y TÍTULOS
 ========================= */
@@ -864,6 +877,7 @@ body {
   background: #16a34a;
 }
 
+/* Botones bloqueados globalmente en index */
 .grid button.bloqueado-global {
   opacity: 0.45;
   cursor: not-allowed;
